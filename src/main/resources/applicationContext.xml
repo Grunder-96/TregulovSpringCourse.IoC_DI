@@ -8,5 +8,5 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	
-	<bean id="myPet" class="com.zaurtregulov.spring.IoC_DI.spring_introduction.Cat"></bean>
+	<bean id="myPet" class="com.zaurtregulov.spring.IoC_DI.spring_introduction.Dog"></bean>
 </beans>
