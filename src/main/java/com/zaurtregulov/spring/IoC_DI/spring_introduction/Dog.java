@@ -2,7 +2,7 @@ package com.zaurtregulov.spring.IoC_DI.spring_introduction;
 
 public class Dog implements Pet {
 	
-	private String name;
+//	private String name;
 	
 	public Dog() {
 		System.out.println("Dog bean is created");
@@ -12,12 +12,20 @@ public class Dog implements Pet {
 	public void say() {
 		System.out.println("Bow-Wow");
 	}
-
-	public String getName() {
-		return name;
+	
+	public void init() {
+		System.out.println("class Dog: init-method");
+	}
+	
+	public void destroy() {
+		System.out.println("class Dog: destroy-method");
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 }
