@@ -10,20 +10,21 @@ public class Person {
 	private String surname;
 	private int age;
 
-//	Начиная со spring 4.3, при наличии одного конструктора указывать аннотацию Autowired необязательно
-	@Autowired
-	public Person(Pet pet) {
+////	Начиная со spring 4.3, при наличии одного конструктора указывать аннотацию Autowired необязательно
+//	@Autowired
+//	public Person(Pet pet) {
+//		System.out.println("Person been is created");
+//		this.pet = pet;
+//	}
+//	
+	public Person() {
 		System.out.println("Person been is created");
-		this.pet = pet;
 	}
 	
-//	public Person() {
-//		System.out.println("Person been is created");
-//	}
-	
 	//Pet -> setPet
-	public void setPet(Pet pet) {
-		System.out.println("Class person: set Pet");
+	@Autowired
+	public void anyMethodName(Pet pet) {
+		System.out.println("Class person: anyMethodName");
 		this.pet = pet;
 	}
 	
