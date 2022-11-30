@@ -1,19 +1,25 @@
 package com.zaurtregulov.spring.IoC_DI.spring_introduction;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
 	
 	private Pet pet;
 	private String surname;
 	private int age;
-	
-//	public Person(Pet pet) {
-//		System.out.println("Person been is created");
-//		this.pet = pet;
-//	}
-	
-	public Person() {
+
+//	Начиная со spring 4.3, при наличии одного конструктора указывать аннотацию Autowired необязательно
+	@Autowired
+	public Person(Pet pet) {
 		System.out.println("Person been is created");
+		this.pet = pet;
 	}
+	
+//	public Person() {
+//		System.out.println("Person been is created");
+//	}
 	
 	//Pet -> setPet
 	public void setPet(Pet pet) {
