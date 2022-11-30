@@ -1,5 +1,8 @@
 package com.zaurtregulov.spring.IoC_DI.spring_introduction;
 
+import org.springframework.stereotype.Component;
+
+@Component()
 public class Cat implements Pet{
 	
 	public Cat() {
