@@ -3,9 +3,11 @@ package com.zaurtregulov.spring.IoC_DI.spring_introduction;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("singleton")
 public class Dog implements Pet {
 	
 //	private String name;
@@ -19,12 +21,12 @@ public class Dog implements Pet {
 		System.out.println("Bow-Wow");
 	}
 	
-//	@PostConstruct
+	@PostConstruct
 	public void init() {
 		System.out.println("class Dog: init-method");
 	}
 	
-//	@PreDestroy
+	@PreDestroy
 	public void destroy() {
 		System.out.println("class Dog: destroy-method");
 	}
