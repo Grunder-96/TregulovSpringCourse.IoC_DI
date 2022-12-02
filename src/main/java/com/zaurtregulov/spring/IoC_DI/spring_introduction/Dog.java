@@ -21,15 +21,15 @@ public class Dog implements Pet {
 		System.out.println("Bow-Wow");
 	}
 	
-	@PostConstruct
-	public void init() {
-		System.out.println("class Dog: init-method");
-	}
-	
-	@PreDestroy
-	public void destroy() {
-		System.out.println("class Dog: destroy-method");
-	}
+//	@PostConstruct
+//	public void init() {
+//		System.out.println("class Dog: init-method");
+//	}
+//	
+//	@PreDestroy
+//	public void destroy() {
+//		System.out.println("class Dog: destroy-method");
+//	}
 
 //	public String getName() {
 //		return name;
