@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
+//@Component("personBean")
 public class Person {
 	
 //	@Autowired
@@ -16,10 +16,15 @@ public class Person {
 //	@Value("${person.age}")
 	private int age;
 
-//	Начиная со spring 4.3, при наличии одного конструктора указывать аннотацию Autowired необязательно
-	@Autowired
-	public Person(@Qualifier("catBean") Pet pet) {
-		System.out.println("Person been is created");
+////	Начиная со spring 4.3, при наличии одного конструктора указывать аннотацию Autowired необязательно
+//	@Autowired
+//	public Person(@Qualifier("catBean") Pet pet) {
+//		System.out.println("Person been is created");
+//		this.pet = pet;
+//	}
+	
+	public Person(Pet pet) {
+		System.out.println("Person bean is created");
 		this.pet = pet;
 	}
 	

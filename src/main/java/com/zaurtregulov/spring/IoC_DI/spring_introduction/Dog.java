@@ -6,7 +6,7 @@ import javax.annotation.PreDestroy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @Scope("singleton")
 public class Dog implements Pet {
 	
