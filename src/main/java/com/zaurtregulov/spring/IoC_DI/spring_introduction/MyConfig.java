@@ -3,9 +3,11 @@ package com.zaurtregulov.spring.IoC_DI.spring_introduction;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
+@PropertySource("classpath:myApp.properties")
 //@ComponentScan("com.zaurtregulov.spring.IoC_DI.spring_introduction")
 public class MyConfig {
 	
